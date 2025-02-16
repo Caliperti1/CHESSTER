@@ -1,0 +1,50 @@
+Desktop Chess 
+Version 0.1 
+Chris Aliperti 
+United States Military Academy Department of Civil and Mechanical Engineering 
+28 October 2023
+
+--------------------------------------------------------------------------------
+Project Overview:
+
+--------------------------------------------------------------------------------
+Version Notes:
+
+--------------------------------------------------------------------------------
+Arduino Camera:
+	This version uses an OV7670 and an arduino on a rig to capture images at 
+	every 3 seconds and store them in a folder. 
+	Tutorial: https://www.instructables.com/OV7670-Arduino-Camera-Sensor-Module-Framecapture-T/
+
+--------------------------------------------------------------------------------
+Solidworks:
+	Soldiworks assembly shows camera rig using arduino Uno, OV7670 and 1020 alluminum 
+
+--------------------------------------------------------------------------------
+Matlab Functions 
+
+	* denotes unused or archived functions 
+
+	greyScale - normalizes an image to greyscale values (0-1)
+		input: image (mxnx3)
+		output: normalized image (mxn)
+
+	
+	*BW - turns image to black an dwhite, using mean pixel value as 	threshhold 
+		input: image (mxnx3)
+		output: BW image with vlaues of 0 or 255 (mxnx3) 
+
+	*squareOffRig - trims image to square matrix with only board using set dimensions based off the camera rig. Archived due to inability to adapt to slight sifts in board or rig.
+		input - image (mxnx3)
+		output - sqaure image martix where deimasion a is based off difference between provided upper,lower,left adn right ounds of board (axax3) 
+
+	sobelMask - finds edges within an image using a 3x3 mask convoluted over image. Gradient of convolution matrix is calculated and value is compared to a threshold and pulled to rail based on thrshold criteria.
+	input - image (nxmx3)
+		thresh - value between 0 and 1. hgiher number will make filter more selective 
+	output - image of edges (nxm) 
+	
+
+
+		
+	
+
